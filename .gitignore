@@ -1,0 +1,17 @@
+# See http://help.github.com/gitignore templates for more info
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.env/venv/ENV/env/ENV2/ve/ve.ENV/python-env/
+
+# IDEs and editors
+.idea/
+.vscode/*!.vscode/settings.json*!*.swp*!*.swo*!~$*
+
+# OS files.DS_StoreThumbs.db
