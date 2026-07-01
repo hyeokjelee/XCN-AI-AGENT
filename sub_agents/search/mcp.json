@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "search_subagent": {
+      "command": "npx",
+      "args": ["--silent", "-y", "tavily-mcp@latest"],
+      "env": {
+        "TAVILY_API_KEY": "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",
+        "DEFAULT_PARAMETERS": "{\"include_images\": true, \"max_results\": 15, \"search_depth\": \"advanced\"}",
+        "NODE_NO_WARNINGS": "1",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "chroma_subagent": {
+      "command": "chroma-mcp",
+      "args": ["--client-type", "http", "--host", "chromadb", "--port", "8000", "--ssl", "false"],
+      "env": {
+        "CHROMA_OPENAI_API_KEY": "dummy"
+      }
+    }
+  }
+}

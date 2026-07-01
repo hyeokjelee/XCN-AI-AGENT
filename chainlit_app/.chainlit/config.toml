@@ -1,0 +1,25 @@
+[project]
+enable_telemetry = false
+user_env = []
+session_timeout = 3600
+cache = false
+
+[features]
+unsafe_allow_html = false
+latex = false
+auto_tag_thread = false
+
+[features.spontaneous_file_upload]
+enabled = false
+
+[UI]
+name = "엑큐 (XCU)"
+description = "XCURENET 멀티 에이전트 AI 비서 — 엑큐(XCU)"
+default_collapse_content = true
+cot = "tool_call"
+custom_css = "/public/custom.css"
+custom_js = "/public/custom.js"
+alert_style = "modern"
+
+[meta]
+generated_by = "2.11.1"

@@ -1,0 +1,75 @@
+/* ===== 엑큐(XCU) UI refinements ===== */
+
+/* 부드러운 폰트 렌더링 */
+* { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* 헤더: 살짝 반투명 + 블러로 깊이감 */
+header {
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid hsl(var(--border) / 0.7) !important;
+}
+
+/* 브랜드 그라데이션 (Primary 버튼 / 보내기 버튼) */
+button[type="submit"],
+#chat-submit,
+.bg-primary {
+  background-image: linear-gradient(135deg,
+    hsl(252 90% 66%) 0%, hsl(268 84% 60%) 100%) !important;
+  border: none !important;
+  transition: transform .12s ease, box-shadow .2s ease, filter .2s ease !important;
+}
+button[type="submit"]:hover,
+#chat-submit:hover {
+  filter: brightness(1.07) !important;
+  box-shadow: 0 6px 20px hsl(255 90% 60% / 0.35) !important;
+  transform: translateY(-1px);
+}
+
+/* 입력창: 더 둥글고 입체적으로 */
+#message-composer,
+.composer,
+form[role="search"] textarea,
+textarea {
+  border-radius: 16px !important;
+}
+#message-composer {
+  box-shadow: 0 4px 24px hsl(240 40% 30% / 0.10) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+/* 메시지 버블: 어시스턴트/사용자 구분 + 카드 느낌 */
+.user-message, [data-step-type="user_message"] {
+  border-radius: 18px 18px 4px 18px !important;
+}
+.ai-message, [data-step-type="assistant_message"] {
+  border-radius: 18px 18px 18px 4px !important;
+}
+
+/* 스텝(툴 호출): 카드형으로 정리 */
+.step, [class*="step"] details {
+  border-radius: 12px !important;
+}
+
+/* 사이드바: 살짝 구분되는 경계 */
+[data-sidebar] { border-right: 1px solid hsl(var(--sidebar-border)) !important; }
+
+/* 스크롤바 슬림하게 */
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--muted-foreground) / 0.55); }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* 스타터(추천 프롬프트) 카드 hover 강조 */
+[class*="starter"]:hover {
+  border-color: hsl(var(--primary) / 0.6) !important;
+  box-shadow: 0 4px 16px hsl(255 90% 60% / 0.18) !important;
+  transform: translateY(-2px);
+  transition: all .15s ease;
+}
+
+/* 로고 크기 살짝 키움 */
+header img[alt*="logo" i], header img[src*="logo" i] { height: 26px !important; }
